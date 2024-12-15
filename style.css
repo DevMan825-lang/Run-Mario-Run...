@@ -1,0 +1,98 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box; 
+}
+body{
+  width:100vw;
+  height:100vh;
+  background-image:linear-gradient(to right, 
+                rgba(0,0,0,0.1),
+                rgba(0,0,0,0.1)
+                ),
+                url(background.jpg);
+    background-repeat:no-repeat;
+    background-size:100% 100%; 
+}
+img{
+  position:absolute;
+  top:91%;
+  filter:drop-shadow(0px,0px,10px,#fff);
+  animation-name:running; 
+  animation-duration:2s;
+  animation-delay:3s;
+  animation-timing-function:linear; 
+  animation-iteration-count:infinite; 
+}
+@keyframes running{
+  0%{
+     translate:0%;
+  }
+  100%{
+     translate:100vw;
+  }
+}
+h1{
+text-align:center;
+font-variant:small-caps;
+color:hsl(0, 0%, 94%);
+font-size:80px;
+text-shadow:2px 2px 4px rgb(56, 79, 79);
+margin-top:100px;
+font-family: "Ubuntu", sans-serif;
+font-weight:800px;
+}
+h1::before{
+  content:"Run Mario";
+  visibility:hidden;
+  animation-name:animate; 
+  animation-duration:2s;
+  animation-delay:1s;
+  animation-timing-function:ease; 
+  animation-iteration-count:infinite;
+}
+@keyframes animate{
+  0%{
+    visibility:hidden;
+  }
+  50%{
+    visibility:visible;
+    transform:scale(1); 
+  }
+}
+
+h1::after{
+  content:"Run...";
+  visibility:hidden;
+  animation-name:animates; 
+  animation-duration:2s;
+  animation-delay:2s;
+  animation-timing-function:ease; 
+  animation-iteration-count:infinite;
+}
+@keyframes animates{
+  0%{
+    visibility:hidden;
+  }
+  50%{
+    visibility:visible;
+    transform:scale(1);
+  }
+ 
+}
+@media(max-width:768px){
+  img{
+    width:80px;
+    height:80px;
+    position:absolute;
+    top:96%;
+   }
+h1{
+text-align:center;
+font-variant:small-caps;
+color:hsl(0, 0%, 94%);
+font-size:80px;
+text-shadow:2px 2px 4px rgb(56, 79, 79);
+margin-top:100px;
+  }
+}
